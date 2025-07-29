@@ -159,14 +159,3 @@ The environment includes these variables:
 4. Select the environment and click "Run Blog API"
 5. View the test results in the "Test Results" tab
 
-### Example Test Scripts
-
-The collection includes test scripts that:
-- Verify response status codes
-- Validate response schemas
-- Save authentication tokens automatically
-- Set environment variables for subsequent requests
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
