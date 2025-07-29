@@ -1,9 +1,8 @@
 import os
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 
 # Load environment variables
