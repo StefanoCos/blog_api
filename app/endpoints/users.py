@@ -4,7 +4,7 @@ from datetime import timedelta
 
 from app.db.base import get_db
 from app.models.models import User
-from app.schemas.schemas import UserCreate, UserResponse, Token, UserUpdate
+from app.schemas.schemas import UserCreate, UserResponse, Token, UserUpdate, LoginRequest
 from app.core.security import (
     get_password_hash, 
     create_access_token, 
@@ -46,11 +46,6 @@ def register_user(user: UserCreate, db: Session = Depends(get_db)):
     db.refresh(db_user)
     return db_user
 
-from pydantic import BaseModel
-
-class LoginRequest(BaseModel):
-    username: str
-    password: str
 
 @router.post("/token", response_model=Token)
 def login_for_access_token(

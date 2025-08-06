@@ -26,6 +26,9 @@ class UserInDB(UserBase):
 class UserResponse(UserInDB):
     pass
 
+class LoginRequest(BaseModel):
+    username: str
+    password: str
 # Token schemas
 class Token(BaseModel):
     access_token: str
@@ -33,6 +36,7 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     username: Optional[str] = None
+
 
 # Post schemas
 class PostBase(BaseModel):
